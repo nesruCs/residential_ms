@@ -1,0 +1,90 @@
+<?php 
+
+require 'lang.php';
+
+?>
+<HTML>
+<head>
+<title>Residential Managemant System</title>
+<link rel="stylesheet"  href="css/style_home.css"/>
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+<style type="text/css">
+body
+{   
+background:#515A5A;
+height: 1000px;
+</style>
+<body>
+    <div class="menu-bar">
+     <ul>
+<li class="active"><a href="home.php"><i class="fa fa-house"><b></i>Home</b></a></li>
+<li class="active"><a href="#.php"><i class="fa fa-user"></i><b><?= __('AboutUs')?></b></a>
+  <div class="sub-menu-1">
+       <ul>
+            <li><a href="#"><b><?= __('Vision')?></b></a></li>
+            <li><a href="#"><b><?= __('Mission')?></b></a></li>
+            <li><a href="#"><b><?= __('Team')?></b></a></li>
+       </ul>
+  </div>
+</li>
+<li class="active"><a href="#.php"><i class="fa fa-phone"></i><b><?= __('ContactUs')?></b></a></li>
+<li class="active"><a href="#.php"><i class="fa fa-newspaper"></i><b><?= __('News')?></b></a></li>
+<li class="active"><a href="feedback.php"><i class="fa fa-comment"></i><b><?= __('Feedback')?></b></a></li>
+<li class="active"><a href="#.php"><i class="fa fa-right-to-bracket"></i><b>Login</b></a>
+<div class="sub-menu-1">
+       <ul>
+            <li><a href="Admin_log.html"><b> Admin</b></a></li>
+            <li><a href="Clerk_log.html"><b> Clerk</b></a></li>
+            <li><a href="Resident_log.html"><b>Resident</b></a></li>
+       </ul>
+  </div>
+</li>
+<li class="active"><a href="#.php"><i class="fa fa-language"></i><b><?= __('Language')?></b></a>
+<div class="sub-menu-1">
+       <ul>
+            <li><a href="home.php?lang=en">English</a></li>
+            <li><a href="home.php?lang=fr">አማርኛ </a></li>
+       </ul>
+  </div>
+</li><li> <a href=""><font face="Times New Roman" size="2" >
+<?php
+                                $Today = date('y:m:d');
+                                $new = date('l, F d, Y', strtotime($Today));
+                                echo $new;
+                                ?>
+</a></li>
+    </ul></div>
+<div class="content">
+
+  <h1><?= __('Well come to')?><br><span><?= __('Andinet Kebele')?><br><?= __('Resident Management System')?></span> </h1>
+            
+                </div>
+              
+                    <footer style="position: fixed; bottom: 0;width: 100%; height: 60px;   /* Height of the footer */ background: #1B2631;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <a href="http://www.google.com" target="_blank"><img src="images/google-map.png" title="Google" width="30" height="25"></a>
+        <a href="http://youtube.com"><img src="images/youtube.png" id="youtube" width="30"></a>
+        <a href="http://facebook.com"><img src="images/facebook.png" id="facebook" width="40"></a> 
+        <a href="http://tweeter.com"><img src="images/tweeter.png" id="tweeter"></a><b><font face="Elephant" color="white"size="3">Copyright &copy; Andinet  Kebele Resident Management System  2015/2023  </font></b>    
+                    </footer>
+
+             
+                  
+</body>
+<script>
+    
+    var sub-menu-1 = document.querySelectorAll(".sub-menu-1");
+
+    for (var i = 0; i < sub-menu-1.length; i++) {
+        
+        sub-menu-1[i].addEventListener('click',function(e){
+
+            for (var x = 0; x < sub-menu-1.length; x++) {
+                sub-menu-1[x].querySelector(".dropdown-content").classList.add("hide");
+            }
+
+            e.currentTarget.querySelector(".dropdown-content").classList.toggle("hide");
+        });
+    }
+
+</script>
+</html>

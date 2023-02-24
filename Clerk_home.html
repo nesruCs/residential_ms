@@ -1,0 +1,77 @@
+<?php 
+
+require 'lang.php';
+
+?>
+<!DOCTYPE html>
+<head>
+<title>Residential Managemant System</title>
+<link rel="stylesheet"  href="css/style_home.css"/>
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+<style type="text/css">
+body
+{   
+background:#515A5A;
+}
+</style>
+</head>
+<body>
+    <div class="menu-bar">
+     <ul>
+<li class="active"><a href="Clerk_home.php" title="Home"><i class="fa fa-house"></i><?= __('Home')?></a></li>
+<li class="active"><a href="register_resident.php" title="Register Resident"><?= __('Reg_Resident')?></a></li>
+<li class="active"><a href="#.php" title="send Message"></i><?= __('sendMessage')?></a></li>
+<li class="active"><a href="#.php" title="Manage Resident"></i><?= __('Manage_Res')?></a>
+<div class="sub-menu-1">
+       <ul>
+            <li><a href="#"><?= __('search Resident')?></a></li>
+            <li><a href="#"><?= __('clearance info')?></a></li>
+       </ul>
+  </div>
+</li>
+<li class="active"><a href="#.php" title="view"></i><?= __('View')?></a>
+  <div class="sub-menu-1">
+       <ul>  <li><a href="#"><?= __('Message')?></a></li>
+            <li><a href="#"><?= __('View Feedback')?></a></li>
+            <li><a href="#"><?= __('Withdrawal request')?></a></li>
+       </ul>
+  </div>
+</li>
+</li></li><li class="active"><a href="#.php" title="change Password"></i><?= __('change_Pass')?></a></li>
+<li class="active"><a href="#.php" ><i class="fa fa-language"></i><?= __('Language')?></a>
+<div class="sub-menu-1">
+       <ul>
+            <li><a href="Admin_home.php?lang=en">English</a></li>
+            <li><a href="Admin_home.php?lang=fr">አማርኛ </a></li>
+       </ul>
+  </div>
+</li>
+<li class="active"><a href="home.php"><i class="fa fa-left-to-bracket"></i><?= __('LogOut')?></a>
+</li></ul></div><div class="content">
+  <h1><?= __('Well come to')?><br><span><?= __('Clerk Page')?><br></span> </h1>
+            
+                </div>
+        <footer style="position: fixed; bottom: 0;width: 100%; height: 35px;/* Height of the footer */ background: #1B2631;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <a href="http://www.google.com" target="_blank"><img src="images/google-map.png" title="Google" width="30" height="25"></a>
+        <a href="http://youtube.com"><img src="images/youtube.png" id="youtube" width="30"height="25"></a>
+        <a href="http://facebook.com"><img src="images/facebook.png" id="facebook" width="30"height="25"></a> 
+        <a href="http://tweeter.com"><img src="images/tweeter.png" id="tweeter"width="30"height="25"></a><b><font face="Elephant"  color="white"size="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright &copy; Andinet  Kebele Resident Management System  2015E.C </font></b></footer>
+</body>
+<script>
+    
+    var sub-menu-1 = document.querySelectorAll(".sub-menu-1");
+
+    for (var i = 0; i < sub-menu-1.length; i++) {
+        
+        sub-menu-1[i].addEventListener('click',function(e){
+
+            for (var x = 0; x < sub-menu-1.length; x++) {
+                sub-menu-1[x].querySelector(".dropdown-content").classList.add("hide");
+            }
+
+            e.currentTarget.querySelector(".dropdown-content").classList.toggle("hide");
+        });
+    }
+
+</script>
+</html>

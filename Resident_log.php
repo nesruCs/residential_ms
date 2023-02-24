@@ -1,0 +1,80 @@
+<?php 
+
+require 'lang.php';
+
+?>
+<HTML>
+<head>
+<title>Residential Managemant System</title>
+<link rel="stylesheet"  href="css/style_home.css"/>
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+<style type="text/css">
+body
+{   
+background-image:url(images/png2.png);
+}
+</style>
+<body>
+    <div class="menu-bar">
+     <ul>
+<li class="active"><a href="home.php"><i class="fa fa-house"></i><?= __('Home')?></a></li>
+<li class="active"><a href="#.php"><i class="fa fa-user"></i><?= __('AboutUs')?></a>
+  <div class="sub-menu-1">
+       <ul>
+            <li><a href="#"><?= __('Vision')?></a></li>
+            <li><a href="#"><?= __('Mission')?></a></li>
+            <li><a href="#"><?= __('Team')?></a></li>
+       </ul>
+  </div>
+</li>
+<li class="active"><a href="#.php"><i class="fa fa-phone"></i><?= __('ContactUs')?></a></li>
+<li class="active"><a href="#.php"><i class="fa fa-newspaper"></i><?= __('News')?></a></li>
+<li class="active"><a href="#.php"><i class="fa fa-comment"></i><?= __('Feedback')?></a></li>
+<li class="active"><a href="#.php"><i class="fa fa-right-to-bracket"></i><?= __('Login')?></a>
+<div class="sub-menu-1">
+       <ul>
+            <li><a href="Admin_log.php"><?= __('Admin')?></a></li>
+            <li><a href="Clerk_log.ph"><?= __('Clerk')?></a></li>
+            <li><a href="Resident_log.php"><?= __('Resident')?></a></li>
+       </ul>
+  </div>
+</li>
+<li class="active"><a href="#.php"><i class="fa fa-language"></i><?= __('Language')?></a>
+<div class="sub-menu-1">
+       <ul>
+            <li><a href="Resident_log.php?lang=en">English</a></li>
+            <li><a href="Resident_log.php?lang=fr">አማርኛ </a></li>
+       </ul>
+  </div>
+</li>
+    </ul></div>
+    
+    <center><form action="Resident_log_ver.php" class="log_form" method="post">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      
+      <div class="form-inner">
+        <h2>LOGIN PAGE</h2>
+        <div class="contents">
+          <font color="red" size="4">*</font><label><?= __('Account Type')?></label>&nbsp;&nbsp;&nbsp;<select name="privilege" id=""><option>Resident</option></select>
+         <input class="input" type="text" name="username" placeholder="<?= __('username')?>" 
+          title="<?= __('Enter userName')?>" />
+          <input class="input" type="password" name="password" placeholder="<?= __('password')?>" 
+          title="Enter password" />
+          <button  class="btn" name="Login"title="<?= __('Login')?>"><?= __('Login')?></button>
+          <button class="btn" type="reset" name="clear" title="<?= __('Clear')?>"><?= __('Clear')?></button><br><br><br>
+          <font color="blue" size="4">*<b><a href = 'forget_pass.php?'> 
+<font color="red" size="3" title='<?= __('You can Check and find  your password')?>'><?= __('Forget Your Password?')?></a></font>
+          </div>
+      </div>
+    </form></center>
+
+</body>
+
+</html>
+
+
+
+
